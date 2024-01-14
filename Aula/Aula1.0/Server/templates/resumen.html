@@ -1,0 +1,68 @@
+{% extends data["Template"] %} {% block contenido %}
+<div id="contenido">
+  <div class="content">
+    <h2>Hola, soy AxelAula, la Inteligencia Artificial del aula, este es el resumen de hoy:</h2>
+    <audio controls>
+      <source src="/resumen-voz.mp3?a={{a}}" type="audio/mpeg">
+      No se puede mostrar el audio.
+    </audio><br>
+    <h3>Hoy hacen {{ data["Weather"]["Temperatura"] }}°C de temperatura, {{ data["Weather"]["Humedad"] }}% de humedad y {{ data["Weather"]["Viento"] }} Km/h de viento.</h3>
+    <h3>Hoy tenemos de comida: </h3>
+    {% if data["Comedor"]["Encendido"] %}
+    {% if data["Comedor"]["Hoy"] != None %}
+    {% for menu in data["Comedor"]["Menus"] %}
+    <h4>Menu {{menu}}</h4>
+    {% if data["Comedor"]["Hoy"][menu] == None %}
+    <b>No disponible.</b>
+    {% else %}
+    <b>Primer Plato: </b>
+    {% if "*" in data["Comedor"]["Hoy"][menu]["plato1"] %}
+    <u>
+    {{data["Comedor"]["Hoy"][menu]["plato1"]}}</u>
+    {% else %}
+    {{data["Comedor"]["Hoy"][menu]["plato1"]}}
+    {% endif %}
+    <br>
+    <b>Segundo Plato: </b>{% if "*" in data["Comedor"]["Hoy"][menu]["plato2"] %}
+    <u>
+      {{data["Comedor"]["Hoy"][menu]["plato2"]}}</u>
+    {% else %}
+    {{data["Comedor"]["Hoy"][menu]["plato2"]}}
+    {% endif %}<br>
+    <b>Postre: </b>{% if "*" in data["Comedor"]["Hoy"][menu]["plato3"] %}
+    <u>
+      {{data["Comedor"]["Hoy"][menu]["plato3"]}}</u>
+    {% else %}
+    {{data["Comedor"]["Hoy"][menu]["plato3"]}}
+    {% endif %}<br>
+    {% if "*" in data["Comedor"]["Hoy"][menu]["plato4"] %}
+    <u>
+      {{data["Comedor"]["Hoy"][menu]["plato4"]}}</u>
+    {% else %}
+    {{data["Comedor"]["Hoy"][menu]["plato4"]}}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% else %}
+    No Disponible
+    {% endif %}
+    {% endif %}
+
+  {% if data["Email"] != [] %}
+  <h3>¡Teneis una carta nueva!: </h3>
+    {% for letter in data["Email"] %}
+    {{letter["contenido"]}}<br>
+    {% endfor %}
+{% endif %}
+{% if data["Tareas"] != [] %}
+  <h3>Tareas de hoy:</h3>
+  {% for tarea in data["Tareas"] %}
+    <b>{{tarea["tarea"]}}</b>: {{tarea["responsable"]}}<br>
+  {% endfor %}
+{% endif %}
+    <h3><i>¡Espero que tengais un dia genial!</i></h3>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends data["Template"] %} {% block contenido %}
+<div id="contenido">
+  <div class="content">
+        <h2>Menu Automatico de {{data["Comedor"]["Nombre"]}}</h2>
+        {% for menu in data["Comedor"]["Menus"] %}
+                <h3>{{menu}}</h3>
+                {% if data["Comedor"]["Hoy"][menu] == None %}
+                  <b>No disponible.</b>
+                {% else %}
+                <b>Fecha: </b>{{data["Comedor"]["Hoy"][menu]["fecha"]}}<br>
+                <b>Primer Plato: </b>{{data["Comedor"]["Hoy"][menu]["plato1"]}}<br>
+                <b>Segundo Plato: </b>{{data["Comedor"]["Hoy"][menu]["plato2"]}}<br>
+                <b>Postre: </b>{{data["Comedor"]["Hoy"][menu]["plato3"]}}<br>
+                {{data["Comedor"]["Hoy"][menu]["plato4"]}}
+                {% endif %}
+        {% endfor %}
+        
+</div>
+</div>
+    
+    
+{% endblock %}

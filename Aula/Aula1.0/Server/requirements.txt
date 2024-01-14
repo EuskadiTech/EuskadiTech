@@ -1,0 +1,6 @@
+gTTS
+Flask
+pysondb
+pandas
+requests
+pyyaml
