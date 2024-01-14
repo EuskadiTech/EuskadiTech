@@ -8,7 +8,7 @@ name: Aula2.0 Server Docker Publish
 on:
   push:
     paths:
-      - Aula/Aula2.0
+      - Aula/Aula2.0/**
     branches: [ "main" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
