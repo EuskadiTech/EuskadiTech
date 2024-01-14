@@ -10,7 +10,7 @@ from flask_appbuilder.security.manager import (
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Your App secret key
-SECRET_KEY = os.environ("ET_SECRET_KEY")
+SECRET_KEY = os.environ["ET_SECRET_KEY"]
 
 # The SQLAlchemy connection string.
 SQLALCHEMY_DATABASE_URI = "sqlite:///data/app.db"
@@ -25,7 +25,7 @@ RECAPTCHA_PRIVATE_KEY = "6Lf1rlApAAAAAKFoOMiJy5hAPjbE1VkheGkzGz4F"
 MAIL_SERVER = 'mail.tech.eus'
 MAIL_USE_TLS = True
 MAIL_USERNAME = 'info@tech.eus'
-MAIL_PASSWORD = os.environ("ET_MAIL_PASSWORD")
+MAIL_PASSWORD = os.environ["ET_MAIL_PASSWORD"]
 MAIL_DEFAULT_SENDER = 'info@tech.eus'
 
 # ------------------------------
