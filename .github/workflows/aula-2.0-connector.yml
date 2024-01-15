@@ -1,4 +1,4 @@
-name: Aula2.0 Server Docker Publish
+name: Aula2.0 Connector Docker Publish
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -12,8 +12,6 @@ on:
     branches: [ "main" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch: 
 
 env:

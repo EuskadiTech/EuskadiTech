@@ -10,7 +10,7 @@
     - Server
     - __Connector *__
     - __AulaSDK *__
-        - __Client *__
+    - __Client *__
 
 (* No disponible)
 (~~xyz~~ Abandonado)
