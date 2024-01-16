@@ -35,7 +35,7 @@ MAIL_DEFAULT_SENDER = 'info@tech.eus'
 APP_NAME = "Aula 2.0"
 
 # Uncomment to setup Setup an App icon
-APP_ICON = "static/img/logo_long.png"
+#APP_ICON = "static/img/logo_long.png"
 
 # ----------------------------------------------------
 # AUTHENTICATION CONFIG
