@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AxelKasa</title>
+</head>
+
+<body>
+    <div class="blue_row center">Comedor</div>
+    {% for w in l %}
+    <span class="a_txt">
+        Menu {{w["foodmenu"]["name"]}}:
+        Primer plato: {{w["plato1"]}},
+        Segundo plato: {{w["plato2"]}},
+        Postre: {{w["plato3"]}},
+        {{w["plato4"]}}.
+    </span>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        <div class="blue_row center">&reg; EuskadiTech 2024</div>
+    </div>
+    <style>
+        .alter:nth-child(odd){
+            background-color: rgb(75, 75, 75) !important;
+        }
+        .alter:nth-child(even){
+            background-color: rgb(100, 100, 100) !important;
+        }
+        body {
+            height: 100vh;
+            margin: 0;
+            font-size: 45px;
+            background-color: black;
+        }
+
+        * {
+            color: white;
+            font-family: monospace;
+        }
+
+        .blue_row {
+            background-color: blue;
+            width: 100%;
+        }
+        .green_row {
+            background-color: green;
+            width: 100%;
+        }
+
+        .a_txt {
+            color: lightcoral;
+            width: max-content;
+        }
+
+        .b_txt {
+            color: orange;
+            width: max-content;
+        }
+
+        .c_txt {
+            color: yellow;
+            width: max-content;
+        }
+
+        .d_txt {
+            color: lightgreen;
+            width: max-content;
+        }
+
+        .e_txt {
+            color: lightblue;
+            width: max-content;
+        }
+
+        .f_txt {
+            color: cyan;
+            width: max-content;
+        }
+
+        .btn {
+            background-color: green;
+            width: max-content;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .footer {
+            position: sticky;
+            width: 100%;
+            bottom: 0;
+            background-color: black;
+        }
+    </style>
+</body>
+
+</html>

@@ -112,7 +112,7 @@ class Foodmenu(Model):
     foodplace = relationship("Foodplace", foreign_keys=[foodplace_id])
 
     def __repr__(self):
-        return self.name + ", " + self.foodplace
+        return self.name + ", " + str(self.foodplace)
 
     @declared_attr
     def created_by_fk(cls):
@@ -147,7 +147,7 @@ class Food(Model):
     plato4 = Column(String(50), unique=False, nullable=False)
 
     def __repr__(self):
-        return self.name + ", " + self.foodmenu.foodplace
+        return self.name + ", " + str(self.foodmenu)
 
     @declared_attr
     def created_by_fk(cls):
@@ -180,7 +180,7 @@ class Student(Model):
     classroom = relationship("Classroom", foreign_keys=[classroom_id])
 
     def __repr__(self):
-        return self.name + ", " + self.classroom
+        return self.name + ", " + str(self.classroom)
 
     @declared_attr
     def created_by_fk(cls):
@@ -211,7 +211,7 @@ class Taskgroup(Model):
     classroom = relationship("Classroom", foreign_keys=[classroom_id])
 
     def __repr__(self):
-        return self.name + ", " + self.classroom
+        return self.name + ", " + str(self.classroom)
 
     @declared_attr
     def created_by_fk(cls):
@@ -242,7 +242,7 @@ class Tasktype(Model):
     taskgroup = relationship("Taskgroup", foreign_keys=[taskgroup_id])
 
     def __repr__(self):
-        return self.name + ", " + self.taskgroup
+        return self.name + ", " + str(self.taskgroup)
 
     @declared_attr
     def created_by_fk(cls):
@@ -275,7 +275,7 @@ class Taskassign(Model):
     student = relationship("Student", foreign_keys=[student_id])
 
     def __repr__(self):
-        return self.name + ", " + self.tasktype
+        return self.name + ", " + str(self.tasktype)
 
     @declared_attr
     def created_by_fk(cls):
