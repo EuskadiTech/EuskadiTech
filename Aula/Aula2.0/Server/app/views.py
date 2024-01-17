@@ -7,6 +7,7 @@ from flask_appbuilder.models.sqla.filters import get_field_setup_query
 from . import appbuilder, db
 from .models import School, Classroom, Foodplace, Foodmenu, Student, Taskassign, Tasktype, Taskgroup, Food
 from flask_babel import lazy_gettext as _
+from flask_appbuilder.api import ModelRestApi, expose
 
 """
     Create your Model based REST API::
@@ -49,6 +50,38 @@ class FilterInManyFunction(BaseFilter):
 def get_user_schools():
     return set([school.id for school in g.user.schools])
     return g.user.schools
+
+
+
+class FoodApi(ModelRestApi):
+    resource_name = 'food_cal'
+    datamodel = SQLAInterface(Food)
+class FoodmenuApi(ModelRestApi):
+    resource_name = 'food_menu'
+    datamodel = SQLAInterface(Foodmenu)
+class FoodplaceApi(ModelRestApi):
+    resource_name = 'food_place'
+    datamodel = SQLAInterface(Foodplace)
+
+class SchoolApi(ModelRestApi):
+    resource_name = 'school'
+    datamodel = SQLAInterface(School)
+class ClassroomApi(ModelRestApi):
+    resource_name = 'classroom'
+    datamodel = SQLAInterface(Classroom)
+class StudentApi(ModelRestApi):
+    resource_name = 'student'
+    datamodel = SQLAInterface(Student)
+
+class TaskgroupApi(ModelRestApi):
+    resource_name = 'task_group'
+    datamodel = SQLAInterface(Taskgroup)
+class TasktypeApi(ModelRestApi):
+    resource_name = 'task_type'
+    datamodel = SQLAInterface(Tasktype)
+class TaskassignApi(ModelRestApi):
+    resource_name = 'task_assign'
+    datamodel = SQLAInterface(Taskassign)
 
 
 class SchoolModelView(ModelView):
@@ -306,3 +339,12 @@ appbuilder.add_view(
     category="Tasks",
     label=_("List Task Types"),
 )
+appbuilder.add_api(FoodApi)
+appbuilder.add_api(FoodmenuApi)
+appbuilder.add_api(FoodplaceApi)
+appbuilder.add_api(SchoolApi)
+appbuilder.add_api(ClassroomApi)
+appbuilder.add_api(StudentApi)
+appbuilder.add_api(TaskgroupApi)
+appbuilder.add_api(TasktypeApi)
+appbuilder.add_api(TaskassignApi)
