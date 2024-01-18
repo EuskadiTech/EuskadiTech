@@ -12,111 +12,133 @@
     {% for w in l %}
     <span class="a_txt">
         Menu {{w["foodmenu"]["name"]}}:
-        Primer plato: {{w["plato1"]}},
-        Segundo plato: {{w["plato2"]}},
-        Postre: {{w["plato3"]}},
-        {{w["plato4"]}}.
     </span>
-    {% endfor %}
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="footer">
-        <div class="blue_row center">&reg; EuskadiTech 2024</div>
-    </div>
-    <style>
-        .alter:nth-child(odd){
-            background-color: rgb(75, 75, 75) !important;
-        }
-        .alter:nth-child(even){
-            background-color: rgb(100, 100, 100) !important;
-        }
-        body {
-            height: 100vh;
-            margin: 0;
-            font-size: 45px;
-            background-color: black;
-        }
+    <span class="b_txt">
+        Primer plato: {{w["plato1"]}},</span>
 
-        * {
-            color: white;
-            font-family: monospace;
-        }
+    <span class="c_txt">
+        Segundo plato: {{w["plato2"]}},</span>
+    <span class="d_txt">
+        Postre: {{w["plato3"]}},</span>
+    <span class="e_txt">
+        {{w["plato4"]}}.</span>
+        <br>
+        {% endfor %}
+        <div class="blue_row center">Tareas</div>
+        {% for t in tasks %}
+        <span class="a_txt">
+            Fecha: {{t["name"]}}
+        </span>
+        <span class="b_txt">
+            Alumno: {{t["student"]["name"]}}
+        </span>
+        <span class="c_txt">
+            Tarea: {{t["tasktype"]["name"]}}
+        </span>
+        <br>
+        {% endfor %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="footer">
+            <div class="blue_row center">&reg; EuskadiTech 2024</div>
+        </div>
+        <style>
+            .alter:nth-child(odd) {
+                background-color: rgb(75, 75, 75) !important;
+            }
 
-        .blue_row {
-            background-color: blue;
-            width: 100%;
-        }
-        .green_row {
-            background-color: green;
-            width: 100%;
-        }
+            .alter:nth-child(even) {
+                background-color: rgb(100, 100, 100) !important;
+            }
 
-        .a_txt {
-            color: lightcoral;
-            width: max-content;
-        }
+            body {
+                height: 100vh;
+                margin: 15px;
+                font-size: 45px;
+                background-color: black;
+            }
 
-        .b_txt {
-            color: orange;
-            width: max-content;
-        }
+            * {
+                color: white;
+                font-family: monospace;
+            }
 
-        .c_txt {
-            color: yellow;
-            width: max-content;
-        }
+            .blue_row {
+                background-color: blue;
+                width: 100%;
+            }
 
-        .d_txt {
-            color: lightgreen;
-            width: max-content;
-        }
+            .green_row {
+                background-color: green;
+                width: 100%;
+            }
 
-        .e_txt {
-            color: lightblue;
-            width: max-content;
-        }
+            .a_txt {
+                color: lightcoral;
+                width: max-content;
+            }
 
-        .f_txt {
-            color: cyan;
-            width: max-content;
-        }
+            .b_txt {
+                color: orange;
+                width: max-content;
+            }
 
-        .btn {
-            background-color: green;
-            width: max-content;
-        }
+            .c_txt {
+                color: yellow;
+                width: max-content;
+            }
 
-        .center {
-            text-align: center;
-        }
+            .d_txt {
+                color: lightgreen;
+                width: max-content;
+            }
 
-        .footer {
-            position: sticky;
-            width: 100%;
-            bottom: 0;
-            background-color: black;
-        }
-    </style>
+            .e_txt {
+                color: lightblue;
+                width: max-content;
+            }
+
+            .f_txt {
+                color: cyan;
+                width: max-content;
+            }
+
+            .btn {
+                background-color: green;
+                width: max-content;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .footer {
+                position: sticky;
+                width: 100%;
+                bottom: 0;
+                background-color: black;
+            }
+        </style>
 </body>
 
 </html>

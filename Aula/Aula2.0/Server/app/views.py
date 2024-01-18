@@ -213,7 +213,7 @@ class TaskassignModelView(ModelView):
 
     base_filters = [["tasktype.taskgroup.classroom.school_id", FilterInManyFunction, get_user_schools]]
     label_columns = {
-        "name": _("Name"),
+        "name": _("Fecha (AAAA-MM-DD)"),
         "tasktype": _("Task Type"),
         "student": _("Student")
     }
@@ -222,7 +222,7 @@ class TaskassignModelView(ModelView):
     show_fieldsets = [
         (_("Essential"), {"fields": ["name", "tasktype","student"]}),
     ]
-    add_columns = ["name", "tasktype"]
+    add_columns = ["name", "tasktype", "student"]
     edit_columns = ["name", "tasktype","student"]
 
 
