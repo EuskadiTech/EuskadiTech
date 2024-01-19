@@ -213,7 +213,7 @@ class TaskassignModelView(ModelView):
 
     base_filters = [["tasktype.taskgroup.classroom.school_id", FilterInManyFunction, get_user_schools]]
     label_columns = {
-        "name": _("Fecha (AAAA-MM-DD)"),
+        "name": _("Date (YYYY-MM-DD)"),
         "tasktype": _("Task Type"),
         "student": _("Student")
     }

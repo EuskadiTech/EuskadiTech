@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-14 19:12+0100\n"
+"POT-Creation-Date: 2024-01-19 17:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,50 +17,144 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.13.1\n"
 
-#: app/views.py:54 app/views.py:69 app/views.py:82 app/views.py:95
-#: app/views.py:110
+#: app/sec_views.py:14 app/sec_views.py:39
+msgid "User info"
+msgstr ""
+
+#: app/sec_views.py:18 app/sec_views.py:43
+msgid "Personal Info"
+msgstr ""
+
+#: app/sec_views.py:22
+msgid "Audit Info"
+msgstr ""
+
+#: app/views.py:90 app/views.py:104 app/views.py:117 app/views.py:130
+#: app/views.py:145 app/views.py:163 app/views.py:183 app/views.py:200
 msgid "Name"
 msgstr ""
 
-#: app/views.py:54 app/views.py:69 app/views.py:82 app/views.py:95
-#: app/views.py:111
+#: app/views.py:90 app/views.py:104 app/views.py:117 app/views.py:130
+#: app/views.py:146
 msgid "Notes"
 msgstr ""
 
-#: app/views.py:54
+#: app/views.py:90
 msgid "Address"
 msgstr ""
 
-#: app/views.py:69 app/views.py:82
-msgid "School"
-msgstr ""
-
-#: app/views.py:95
-msgid "Group"
-msgstr ""
-
-#: app/views.py:112
+#: app/views.py:90 app/views.py:147
 msgid "Food Place"
 msgstr ""
 
-#: app/views.py:167
+#: app/views.py:94 app/views.py:108 app/views.py:121 app/views.py:134
+#: app/views.py:152 app/views.py:171 app/views.py:189 app/views.py:206
+#: app/views.py:223 app/views.py:243
+msgid "Essential"
+msgstr ""
+
+#: app/views.py:95 app/views.py:135 app/views.py:153 app/views.py:172
+msgid "Optional"
+msgstr ""
+
+#: app/views.py:104 app/views.py:117
+msgid "School"
+msgstr ""
+
+#: app/views.py:130
+msgid "Group"
+msgstr ""
+
+#: app/views.py:164
+msgid "Email Address"
+msgstr ""
+
+#: app/views.py:165
+msgid "Phone number"
+msgstr ""
+
+#: app/views.py:166 app/views.py:184
+msgid "Classroom"
+msgstr ""
+
+#: app/views.py:201
+msgid "Task Group"
+msgstr ""
+
+#: app/views.py:216
+msgid "Date (YYYY-MM-DD)"
+msgstr ""
+
+#: app/views.py:217
+msgid "Task Type"
+msgstr ""
+
+#: app/views.py:218
+msgid "Student"
+msgstr ""
+
+#: app/views.py:233
+msgid "Date"
+msgstr ""
+
+#: app/views.py:234
+msgid "Plate 1"
+msgstr ""
+
+#: app/views.py:235
+msgid "Plate 2"
+msgstr ""
+
+#: app/views.py:236
+msgid "Plate 3"
+msgstr ""
+
+#: app/views.py:237
+msgid "Plate 4"
+msgstr ""
+
+#: app/views.py:238
+msgid "Food Menu"
+msgstr ""
+
+#: app/views.py:244
+msgid "Plates"
+msgstr ""
+
+#: app/views.py:268
 msgid "List Schools"
 msgstr ""
 
-#: app/views.py:174
+#: app/views.py:275 app/views.py:282
 msgid "List Classrooms"
 msgstr ""
 
-#: app/views.py:181
-msgid "List All Classrooms"
-msgstr ""
-
-#: app/views.py:190
+#: app/views.py:291
 msgid "List Food Places"
 msgstr ""
 
-#: app/views.py:198
+#: app/views.py:299
 msgid "List Food Menus"
+msgstr ""
+
+#: app/views.py:308
+msgid "Food Calendar"
+msgstr ""
+
+#: app/views.py:316
+msgid "List Students"
+msgstr ""
+
+#: app/views.py:324
+msgid "Task Calendar"
+msgstr ""
+
+#: app/views.py:332
+msgid "List Task Groups"
+msgstr ""
+
+#: app/views.py:340
+msgid "List Task Types"
 msgstr ""
 
 #: app/templates/404.html:4
