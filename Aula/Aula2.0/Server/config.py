@@ -32,7 +32,7 @@ MAIL_DEFAULT_SENDER = 'info@tech.eus'
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-APP_NAME = "Aula 2.0"
+APP_NAME = "Super Aula"
 
 # Uncomment to setup Setup an App icon
 #APP_ICON = "static/img/logo_long.png"
@@ -98,7 +98,7 @@ IMG_UPLOAD_URL = "/static/uploads/"
 # Theme configuration
 # these are located on static/appbuilder/css/themes
 # you can create your own and easily use them placing them on the same dir structure to override
-# APP_THEME = "bootstrap-theme.css"  # default bootstrap
+APP_THEME = "bootstrap-theme.css"  # default bootstrap
 # APP_THEME = "cerulean.css"
 # APP_THEME = "amelia.css"
 # APP_THEME = "cosmo.css"
