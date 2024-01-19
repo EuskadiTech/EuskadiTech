@@ -32,7 +32,7 @@ MAIL_DEFAULT_SENDER = 'info@tech.eus'
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-APP_NAME = "Super Aula"
+APP_NAME = "Axel Aula"
 
 # Uncomment to setup Setup an App icon
 #APP_ICON = "static/img/logo_long.png"
@@ -72,7 +72,7 @@ AUTH_USER_REGISTRATION_ROLE = "Public"
 # Babel config for translations
 # ---------------------------------------------------
 # Setup default language
-BABEL_DEFAULT_LOCALE = "en"
+BABEL_DEFAULT_LOCALE = "es"
 # Your application default translation path
 BABEL_DEFAULT_FOLDER = "translations"
 # The allowed translation for you app
