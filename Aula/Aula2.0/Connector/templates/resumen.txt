@@ -1,0 +1,14 @@
+Hola, soy AxelAula, el asistente del aula, este es el resumen de hoy:
+Hoy tenemos de comida: 
+{% for w in l %}
+Menu {{w["foodmenu"]["name"]}}:
+Primer plato: {{w["plato1"]}},
+Segundo plato: {{w["plato2"]}},
+Postre: {{w["plato3"]}},
+{{w["plato4"]}}.
+{% endfor %}
+Tareas de hoy: 
+{% for t in tasks %}
+Alumno: {{t["student"]["name"]}}
+Tarea: {{t["tasktype"]["name"]}}
+{% endfor %}

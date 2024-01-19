@@ -1,7 +1,11 @@
 import requests
+from datetime import datetime
 
 BASE_URL = "https://aula.tech.eus/api/v1"
 
+def get_date():
+    now = datetime.now()
+    return f"{now.year}-{now.month:02d}-{now.day:02d}"
 
 def auth(user, password):
     data = {"password": password, "provider": "db", "refresh": True, "username": user}
@@ -150,5 +154,5 @@ def taskassign_filter(aut, classroom: int):
     y = tasktype_list(aut)
     Y = [tt["id"] for tt in y if tt["taskgroup"]["id"] in X]
     z = taskassign_list(aut)
-    Z = [ta for ta in z if ta["tasktype"]["id"] in Y]
+    Z = [ta for ta in z if ta["tasktype"]["id"] in Y and ta["name"] == get_date()]
     return Z
